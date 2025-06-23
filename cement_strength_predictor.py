@@ -1,6 +1,7 @@
 # cement_strength_predictor.py
 
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error
@@ -40,7 +41,8 @@ def predict_strength():
             val = float(input(f"{column} (range: {min_val:.2f} – {max_val:.2f}): "))
             user_input.append(val)
         
-        result = model.predict([user_input])
+        user_df = pd.DataFrame(np.array([user_input]), columns=x.columns)
+        result = model.predict(user_df)
         print(f"\n🧾 Estimated Cement Strength: {result[0]:.2f} MPa")
 
     except Exception as e:
