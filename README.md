@@ -46,6 +46,6 @@ The model predicts the final compressive strength in MPa.
   - Cement (kg in a m^3 mixture) (range: 102.00 – 540.00): 350
   - Water (kg in a m^3 mixture) (range: 121.75 – 247.00): 190
   - ...
-  -🧾 Estimated Cement Strength: 27.15 MPa
+  - 🧾 Estimated Cement Strength: 27.15 MPa
 
 ---
